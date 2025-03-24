@@ -1,0 +1,88 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+/* Question form */
+.question-section textarea {
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Answer section */
+.answer-section {
+  margin-top: 20px;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.hidden {
+  display: none;
+}
+
+#answer-content {
+  margin-bottom: 10px;
+  white-space: pre-wrap; /* preserve line breaks */
+}
+
+#error-message {
+  color: #d9534f;
+  background-color: #f2dede;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Saved answers */
+.saved-answers-section {
+  margin-top: 20px;
+}
+
+.saved-answer {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}

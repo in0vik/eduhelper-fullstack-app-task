@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EduHelper - Simple Q&A</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    {% csrf_token %} <!-- Django security token for POST -->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>EduHelper</h1>
+        <p>Ask a question and save the answer!</p>
+      </header>
+
+      <main>
+        <!-- Form to submit a question -->
+        <section class="question-section">
+          <form id="question-form">
+            <textarea
+              id="question-input"
+              placeholder="Type your question here..."
+              rows="4"
+            ></textarea>
+            <button type="submit" id="ask-button">Ask</button>
+          </form>
+        </section>
+
+        <!-- Section where the answer is displayed -->
+        <section class="answer-section">
+          <div id="loading" class="hidden">Please wait... Loading...</div>
+          <div id="answer-container" class="hidden">
+            <h2>Answer:</h2>
+            <div id="answer-content"></div>
+            <button id="save-button">Save this answer</button>
+          </div>
+          <div id="error-message" class="hidden"></div>
+        </section>
+
+        <!-- List of saved Q&A -->
+        <section class="saved-answers-section">
+          <h2>Saved Q&A</h2>
+          <div id="saved-answers-list">
+            {% if saved_answers %}
+              {% for item in saved_answers %}
+                <div class="saved-answer">
+                  <h3>Question: {{ item.question }}</h3>
+                  <p><strong>Answer:</strong> {{ item.answer }}</p>
+                  <p class="saved-at">Saved at: {{ item.created_at|date:"Y-m-d H:i" }}</p>
+                </div>
+              {% endfor %}
+            {% else %}
+              <p>No saved answers yet.</p>
+            {% endif %}
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
