@@ -53,8 +53,8 @@ For a detailed overview of the project's organization and what each file does, p
 
      Start from [README_EXAMPLE.md](README_EXAMPLE.md)
 
-5. **Push to GitHub**
-
+5. **Git & GitHub**
+   - Create clear commits while developing
    - Include your final solution in a public GitHub repository.
    - Make sure your **README.md** is crystal clear so others can try your Q\&A app without confusion\!
 

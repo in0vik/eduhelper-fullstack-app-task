@@ -43,3 +43,14 @@ app-environment/
 .vscode/
 *.swp
 *.swo 
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100 
